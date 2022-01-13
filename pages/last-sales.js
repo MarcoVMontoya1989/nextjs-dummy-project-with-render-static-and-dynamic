@@ -6,7 +6,7 @@ function LastSalesPage(props) {
   // const [isLoading, setIsLoading] = useState(false);
 
   const { data, error } = useSWR(
-    'https://nextjs-course-c81cc-default-rtdb.firebaseio.com/sales.json'
+    'https://dummymoviesreact-default-rtdb.firebaseio.com/sales.json'
   );
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function LastSalesPage(props) {
 
   // useEffect(() => {
   //   setIsLoading(true);
-  //   fetch('https://nextjs-course-c81cc-default-rtdb.firebaseio.com/sales.json')
+  //   fetch('https://dummymoviesreact-default-rtdb.firebaseio.com/sales.json')
   //     .then((response) => response.json())
   //     .then((data) => {
   //       const transformedSales = [];
@@ -66,7 +66,7 @@ function LastSalesPage(props) {
 
 export async function getStaticProps() {
   const response = await fetch(
-    'https://nextjs-course-c81cc-default-rtdb.firebaseio.com/sales.json'
+    'https://dummymoviesreact-default-rtdb.firebaseio.com/sales.json'
   );
   const data = await response.json();
 
